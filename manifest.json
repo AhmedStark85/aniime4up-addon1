@@ -1,0 +1,24 @@
+
+{
+  "id": "org.aniime4up.stremio",
+  "version": "1.0.0",
+  "name": "Aniime4up أنمي مترجم",
+  "description": "إضافة لعرض جميع الأنميات المترجمة من موقع anime4up داخل Stremio. مع تصنيف حسب النوع: أكشن، شونن، قوى خارقة، رياضة، مغامرات.",
+  "logo": "https://anime4up.cam/wp-content/uploads/2020/07/logo.png",
+  "background": "https://anime4up.cam/wp-content/uploads/2020/07/logo.png",
+  "types": ["series"],
+  "catalogs": [
+    {
+      "type": "series",
+      "id": "aniime4up_all",
+      "name": "كل الأنميات",
+      "genres": ["أكشن", "شونن", "قوى خارقة", "رياضة", "مغامرات"]
+    }
+  ],
+  "resources": ["catalog", "stream"],
+  "idPrefixes": ["tt"],
+  "behaviorHints": {
+    "configurable": false,
+    "adult": false
+  }
+}
