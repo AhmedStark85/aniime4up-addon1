@@ -3,7 +3,7 @@ const { addonBuilder } = require("stremio-addon-sdk");
 
 const builder = new addonBuilder({
   id: "org.aniime4up.stremio",
-  version: "1.0.0",
+  version: "1.0.1",
   name: "Aniime4up أنمي",
   description: "إضافة أنمي من موقع anime4up مترجمة للعربية",
   catalogs: [
@@ -16,7 +16,7 @@ const builder = new addonBuilder({
   ],
   resources: ["catalog", "stream"],
   types: ["series"],
-  idPrefixes: ["tt"],
+  idPrefixes: ["anime4up"]
 });
 
 builder.defineCatalogHandler(({ type, id }) => {
@@ -24,14 +24,14 @@ builder.defineCatalogHandler(({ type, id }) => {
     return Promise.resolve({
       metas: [
         {
-          id: "tt1000001",
+          id: "naruto-shippuden",
           type: "series",
           name: "Naruto Shippuden",
           poster: "https://anime4up.cam/wp-content/uploads/Naruto-Shippuden.jpg",
           background: "https://anime4up.cam/wp-content/uploads/Naruto-Shippuden.jpg"
         },
         {
-          id: "tt1000002",
+          id: "boku-no-hero-academia",
           type: "series",
           name: "My Hero Academia",
           poster: "https://anime4up.cam/wp-content/uploads/MyHero.jpg",
@@ -48,7 +48,7 @@ builder.defineStreamHandler(({ id }) => {
   return Promise.resolve({
     streams: [
       {
-        title: "مشاهدة مباشرة",
+        title: "مشاهدة على anime4up",
         url: `https://anime4up.cam/anime/${id}/`
       }
     ]
